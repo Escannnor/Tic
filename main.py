@@ -12,5 +12,12 @@ time.sleep(15)
 # skip.send_keys(Keys.ENTER)
 time.sleep(20)
 window = driver.find_element(By.TAG_NAME, 'html')
-window.send_keys(Keys.PAGE_DOWN)
-time.sleep(15)
+
+scroll_times = 5
+
+for _ in range(scroll_times):
+    
+    window.send_keys(Keys.PAGE_DOWN)
+    time.sleep(5)
+    
+print('done')
